@@ -17,7 +17,7 @@ class QRView extends StatefulWidget {
 
   final QRViewCreatedCallback onQRViewCreated;
 
-  final ShapeBorder overlay;
+  final Widget overlay;
 
   @override
   State<StatefulWidget> createState() => _QRViewState();
@@ -26,18 +26,7 @@ class QRView extends StatefulWidget {
 class _QRViewState extends State<QRView> {
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        _getPlatformQrView(),
-        widget.overlay != null
-            ? Container(
-                decoration: ShapeDecoration(
-                  shape: widget.overlay,
-                ),
-              )
-            : Container(),
-      ],
-    );
+    return _getPlatformQrView();
   }
 
   Widget _getPlatformQrView() {
