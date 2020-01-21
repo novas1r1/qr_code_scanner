@@ -17,7 +17,7 @@ class QRView extends StatefulWidget {
 
   final QRViewCreatedCallback onQRViewCreated;
 
-  final Widget overlay;
+  final ShapeBorder overlay;
 
   @override
   State<StatefulWidget> createState() => _QRViewState();
